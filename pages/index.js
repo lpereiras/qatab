@@ -1,5 +1,10 @@
 function Home() {
-  return <h1> 🚧 On my way to be a extraordinary SDET 🚧 </h1>;
+  return (
+    <h1>
+      🚧 Building the road to become a confident SDET and a senior I can be
+      proud of🚧
+    </h1>
+  );
 }
 
 export default Home;
