@@ -4,12 +4,14 @@
   "description": "Desenvolvimento de aplicação funcional e realista com intuito de aprofundar conhecimentos em conceitos técnicos que envolvem SDLC de maneira geral.",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run docker:up && next dev",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "docker:up": "docker compose --file infra/compose.yaml up -d"
+    "docker:up": "docker compose -f infra/compose.yaml up -d",
+    "docker:stop": "docker compose -f infra/compose.yaml stop",
+    "docker:down": "docker compose -f infra/compose.yaml down"
   },
   "author": "Lucas Pereira",
   "license": "MIT",
