@@ -18,8 +18,6 @@ async function status(req, res) {
   const version = dbVersion.rows[0].server_version;
   const maxConnections = dbMaxConnections.rows[0].max_connections;
   const activeConnections = dbOpenConnections.rows[0].count;
-
-  console.log(activeConnections)
   
   res.status(200).json({
     status: "I'M ALIVE",
